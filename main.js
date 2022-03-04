@@ -3,7 +3,7 @@ const github = require('@actions/github')
 const fetch = require('node-fetch')
 
 const prBody = github.context.payload.pull_request?.body
-console.log(prBody)
+console.log(github.context)
 if (!prBody) {
   core.setFailed('Could not retrieve PR body')
   return
